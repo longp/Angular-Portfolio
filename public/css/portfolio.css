@@ -1,0 +1,179 @@
+body {
+   transition: background 3s linear;
+   /*background-image: url(http://i.imgur.com/NNoFNWf.png);*/
+   background-size: cover;
+  }
+
+p>a,
+p>a:hover{
+  color: yellow;
+}
+img.center-block{
+  width: 60%;
+}
+img.img-responsive{
+  margin: 0 auto;
+}
+img.portfolio_img {
+  width: 35vw;
+  height: 20vh;
+}
+
+i {
+
+}
+hr#about,
+hr#blog,
+hr#portfolio
+ {
+clear: both;
+visibility: hidden;
+margin-top: 250px;
+
+}
+address {
+  color: #660000;
+  font-size: 1.5em;
+}
+.contact-form {
+  color:DarkViolet;
+}
+/* div sections */
+.jumbotron {
+  background-color: red;
+  opacity: .8;
+  color: whitesmoke;
+  text-shadow:1px 1px brown;
+}
+
+/*beginning screen*/
+div.begin>table {
+  font-size: 2em;
+  color: whitesmoke;
+}
+.desc{
+  font-size: .5em;
+}
+.begin-row{
+  margin-top: 150px;
+}
+.begin-description {
+  margin-top: 15px;
+  margin-bottom: 300px;
+}
+
+/*navbar*/
+
+.navbar-brand,
+.navbar-default .navbar-nav >li >a {
+
+ /*background: #e0ffc7 url(../images/hexa.gif) center; */
+}
+.navbar,
+.navbar-brand,
+.navbar-default .navbar-nav >li >a {
+  background-color: coral;
+  color: whitesmoke !important;
+  font-size: 1.15em;
+
+  cursor: pointer; cursor: hand;
+}
+.navbar-default .navbar-brand {
+  color:whitesmoke;
+}
+
+
+/*blog*/
+#blog-posts {
+  position: relative;
+  bottom: -20px;
+}
+
+
+
+
+
+/*portfolio*/
+.portfolio {
+  margin-top: 25px;
+}
+
+
+
+/*footer*/
+.well {
+
+  position: absolute;
+  bottom:0;
+  width: 100%;
+ background-color: black;
+  color: white;
+}
+/*social icons*/
+
+.fa {
+  width:2em;
+  height:1.25em;
+  border: solid 2px #fff;
+  border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.fa:hover{
+  border: solid 2px #fff;
+    color: #18bc9c;
+    background: #fff;
+}
+
+
+/*project btn*/
+.project-icon:hover {
+  font-size: 1.3em;
+  color:  white;
+  background-color: DarkViolet;
+}
+.project-icon{
+  font-size: 1.3em;
+  color:  DarkViolet;
+  background-color: white;
+  opacity: .8;
+  border-radius: 10px;
+
+}
+
+
+/* star light emblem*/
+
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 100%;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: salmon;
+}
+
+hr.star-light:after {
+    color: whitesmoke;
+    background-color: salmon;
+    border-radius: 10px;
+}
