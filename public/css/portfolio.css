@@ -132,12 +132,13 @@ div.begin>table {
 /*project btn*/
 .project-icon:hover {
   font-size: 1.3em;
-  color:  white;
-  background-color: DarkViolet;
+  color:white;
+  background-color: Crimson;
+
 }
 .project-icon{
   font-size: 1.3em;
-  color:  DarkViolet;
+  color:  white;
   background-color: white;
   opacity: .8;
   border-radius: 10px;
