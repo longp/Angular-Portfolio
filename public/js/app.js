@@ -22,10 +22,6 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/galaxy',
       templateUrl: '/partials/galaxy.html'
     })
-    .state('pokemon', {
-      url: '/pokemon',
-      templateUrl: '/partials/pokemon.html'
-    })
     .state('food', {
       url: '/food',
       templateUrl: '/partials/food.html'

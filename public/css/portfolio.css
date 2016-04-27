@@ -50,14 +50,14 @@ textarea#InputMessage {
 }
 .hitup-div {
   font-weight: bold;
-  font-size: 1.2em;
-  color: DIMGRAY;
+  font-size: 1.5em;
+  color: brown;
 }
 
 /* div sections */
 .jumbotron {
   background-color: red;
-  opacity: .8;
+  opacity: .9;
   color: whitesmoke;
   text-shadow:1px 1px brown;
 }
@@ -214,11 +214,11 @@ div.begin>table {
 .project-icon{
   margin-top: 10vh;
   margin-right: 5vh;
-  font-size: 1.3em;
-  color: #D1D0CE;
-  opacity: .8;
+  font-size: 0em;
+  /*color: #D1D0CE;*/
+
   border-radius: 20px;
-  background-color:#D1D0CE;
+  background-color: white;
 
 }
 .project-div {
