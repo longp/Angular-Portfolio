@@ -34,12 +34,26 @@ margin-top: 250px;
 
 }
 address {
-  color: #660000;
-  font-size: 1.5em;
+  color: DarkViolet;
+  font-size: 13em;
+  font-weight: bold;
 }
-.contact-form {
-  color:DarkViolet;
+/*contact*/
+input#InputName,
+input#InputEmail,
+input#InputReal,
+textarea#InputMessage {
+  width: 41vw;
 }
+.contact-div {
+  margin-top: 20vh;
+}
+.hitup-div {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: DIMGRAY;
+}
+
 /* div sections */
 .jumbotron {
   background-color: red;
@@ -48,15 +62,59 @@ address {
   text-shadow:1px 1px brown;
 }
 
+
 /*beginning screen*/
-.home-logo {
-  opacity: .01;
-  height: 45vh;
-}
+
 .home-txt {
-  color: RED;
-  font-size: 3em;
+  text-align:center;
+  font-size:6.5em;
+  color:White;
+  letter-spacing: 1vh;
+  font-weight:700;
+  text-transform:uppercase;
+  text-shadow:0px 0px 5px gold,
+      0px 0px 7px gold;
 }
+.area{
+  text-align:center;
+  font-size:6.5em;
+  color:White;
+  letter-spacing: 1vh;
+  font-weight:700;
+  text-transform:uppercase;
+  animation:blur 4s ease-in-out infinite;
+  text-shadow:0px 0px 5px gold,
+      0px 0px 7px gold;
+}
+.bounceIn {
+  animation-duration: infinite;
+}
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px Gold ,
+      0px 0px 10px Gold ,
+      0px 0px 25px Gold ,
+      0px 0px 25px Gold ,
+      0px 0px 25px DarkOrange ,
+      0px 0px 25px DarkOrange ,
+      0px 0px 25px DarkOrange ,
+      0px 0px 25px DarkOrange ,
+      0px 0px 50px white,
+      0px 0px 50px white,
+      0px 0px 50px white,
+      0px 0px 150px white,
+      0px 10px 100px white,
+      0px 10px 100px white,
+      0px 10px 100px white,
+      0px 10px 100px white,
+      0px -10px 100px white,
+      0px -10px 100px white;}
+}
+.home-logo {
+  margin-top: 30vh;
+
+}
+
 
 div.begin>table {
   font-size: 2em;
@@ -77,8 +135,6 @@ div.begin>table {
 
 .navbar-brand,
 .navbar-default .navbar-nav >li >a {
-
- /*background: #e0ffc7 url(../images/hexa.gif) center; */
 }
 .navbar,
 .navbar-brand,
@@ -86,7 +142,6 @@ div.begin>table {
   background-color: coral;
   color: whitesmoke !important;
   font-size: 1.15em;
-
   cursor: pointer; cursor: hand;
 }
 .navbar-default .navbar-brand {
@@ -108,6 +163,10 @@ div.begin>table {
   width: 25%;
   border-radius: 10px;
 }
+.about-div {
+  margin-top: 10vh;
+  opacity: .8;
+}
 
 /*portfolio*/
 .portfolio {
@@ -126,7 +185,7 @@ div.begin>table {
 }
 /*social icons*/
 
-.fa {
+.footer-fa {
   width:2em;
   height:1.25em;
   border: solid 2px #fff;
@@ -137,40 +196,75 @@ div.begin>table {
     transition: all .3s ease-in-out;
 }
 
-.fa:hover{
+.footer-fa:hover{
   border: solid 2px #fff;
     color: #18bc9c;
     background: #fff;
 }
-
-
 /*project btn*/
-.project-header {
-  opacity: .8;
-  font-size: 2.5em;
-  color: RED;
-  background-color: lightblue;
-font-family: cursive;
-}
+
 .project-icon:hover {
   font-size: 1.3em;
   color:white;
-  background-color: Crimson;
+  background-color: crimson;
   /*width: 25%;*/
   /*min-height: 15px;*/
-
 }
+
 .project-icon{
-  /*min-height: 110vh;*/
-  margin-bottom: 10px;
+  margin-top: 10vh;
+  margin-right: 5vh;
   font-size: 1.3em;
-  color:  white;
-  background-color: white;
+  color: #D1D0CE;
   opacity: .8;
-  border-radius: 10px;
-  /*width: 100%*/
+  border-radius: 20px;
+  background-color:#D1D0CE;
+
+}
+.project-div {
+  margin-top: 40vh;
 }
 
+.showcase-project {
+  margin-top: 10vh;
+  opacity: .9;
+  border-radius: 10px;
+  background-color:  brown;
+
+}
+.project-show-div {
+  /*background-color: white;*/
+  height: 80vh;
+  opacity: .7;
+}
+.project-fa {
+  height: 25vh;
+  width:25vh;
+}
+
+.project-img {
+  width: 100vh;
+  height: 70vh;
+}
+
+.project-fa {
+
+  border-radius: 5px;
+    font-size: 10em;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.project-fa:hover{
+  border: solid 2px #fff;
+    color: #violet;
+    background: violet;
+}
+.project-span {
+  font-size: 1.25em;
+  color: white;
+}
 
 /* star light emblem*/
 

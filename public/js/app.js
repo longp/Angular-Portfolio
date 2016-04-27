@@ -15,7 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('projects', {
       url: '/projects',
-      templateUrl: '/partials/projects.html'
+      templateUrl: '/partials/projects.html',
+      controller: 'projectController'
     })
     .state('galaxy', {
       url: '/galaxy',
@@ -24,6 +25,18 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('pokemon', {
       url: '/pokemon',
       templateUrl: '/partials/pokemon.html'
+    })
+    .state('food', {
+      url: '/food',
+      templateUrl: '/partials/food.html'
+    })
+    .state('facecheck', {
+      url: '/facecheck',
+      templateUrl: '/partials/facecheck.html'
+    })
+    .state('twitch', {
+      url: '/twitch',
+      templateUrl: '/partials/twitch.html'
     })
     .state('contact', {
       url: '/contact',
@@ -34,8 +47,14 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
 });
+app.controller("projectController", function ($rootScope, $scope) {
+  app.directive('backImg', function($rootScope){
+    return function(scope,element,attr){
 
-app.directive('backImg', function(){
+    };
+  });
+})
+app.directive('backImg', function($rootScope){
   return function(scope, element, attr){
     var backgroundArr = [
       'url("http://i.imgur.com/NNoFNWf.png")',
@@ -47,9 +66,18 @@ app.directive('backImg', function(){
       'url("http://i.imgur.com/laSSeYN.png")',
       'url("http://i.imgur.com/HaYuGQi.png")',]
     var random = backgroundArr[Math.floor(Math.random()*8)]
+    $rootScope.background = backgroundArr[2];
+    $rootScope.element = element;
+    console.log($rootScope)
     element.css({
-      'background-image': backgroundArr[2],
+      'background-image': $rootScope.background,
       'background-size' : 'cover'
     });
+    $rootScope.changebg = function ($rootScope, element, attr) {
+      element.css({
+        'background-image': $rootScope.background,
+        'background-size' : 'cover'
+      });
+    }
   };
 });
