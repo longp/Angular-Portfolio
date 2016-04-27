@@ -36,22 +36,27 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('contact', {
       url: '/contact',
-      templateUrl: '/partials/contact.html'
+      templateUrl: '/partials/contact.html',
+      controller:'contactController'
     })
-
-
     // use the HTML5 History API
     $locationProvider.html5Mode({
     enabled: true,
     requireBase: false
   });
 });
-app.controller("projectController", function ($rootScope, $scope) {
-  app.directive('backImg', function($rootScope){
-    return function(scope,element,attr){
-
-    };
-  });
+app.controller("contactController", function ($rootScope, $scope, $http) {
+  $scope.submit = function () {
+    $http({
+      method:"POST",
+      url: '/email/send',
+      data:$scope.email
+    }).success(function (data) {
+      console.log(data)
+    }).catch(function (err) {
+      console.log(err)
+    })
+  }
 })
 app.directive('backImg', function($rootScope){
   return function(scope, element, attr){
@@ -65,18 +70,10 @@ app.directive('backImg', function($rootScope){
       'url("http://i.imgur.com/laSSeYN.png")',
       'url("http://i.imgur.com/HaYuGQi.png")',]
     var random = backgroundArr[Math.floor(Math.random()*8)]
-    $rootScope.background = backgroundArr[2];
-    $rootScope.element = element;
-    console.log($rootScope)
     element.css({
-      'background-image': $rootScope.background,
+      'background-image': backgroundArr[2],
       'background-size' : 'cover'
     });
-    $rootScope.changebg = function ($rootScope, element, attr) {
-      element.css({
-        'background-image': $rootScope.background,
-        'background-size' : 'cover'
-      });
-    }
+
   };
 });

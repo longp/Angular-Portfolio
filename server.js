@@ -40,7 +40,9 @@ app.use("/css", express.static("public/css"));
 app.use('/partials', express.static('/views/partials'))
 
 // Routes
+var email = require('./routes/email.js')
 app.use('/', index);
+app.use('/email', email);
 
 app.listen(PORT, function () {
   console.log("Listen on port %s", PORT);
