@@ -53,6 +53,7 @@ app.controller("contactController", function ($rootScope, $scope, $http) {
       url: '/email/send',
       data:$scope.email
     }).then(function (data) {
+      console.log('this happend 1')
       $http.get('/send')
       .then(function(data) {
         console.log('hehe', data)
