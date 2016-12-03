@@ -3,6 +3,10 @@ var router = express.Router();
 var nodemailer = require("nodemailer");
 var smtpTransport = require("nodemailer-smtp-transport")
 // Home Route
+router.get('/send', function(req,res) {
+  res.send(process.env.GMAIL_USER)
+})
+)
 router.post('/send', function(req, res) {
   // need to get Sendmail for this to work.....
 
@@ -10,9 +14,6 @@ router.post('/send', function(req, res) {
   var email = req.body.email
   var message = req.body.message
   var phone = req.body.phone
-  console.log(process.env.GMAIL_USER)
-  console.log(process.env.PASS)
-
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
