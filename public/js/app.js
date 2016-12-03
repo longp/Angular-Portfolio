@@ -52,7 +52,11 @@ app.controller("contactController", function ($rootScope, $scope, $http) {
       method:"POST",
       url: '/email/send',
       data:$scope.email
-    }).catch(function (err) {
+    })
+    .then(function(data) {
+      alert('thanks, keep in touch!')
+    })
+    .catch(function (err) {
       console.log(err)
     })
   }

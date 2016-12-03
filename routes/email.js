@@ -17,8 +17,8 @@ router.post('/send', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user :'bangicku@gmail.com',
-      pass : 'silver63'
+      user :process.env.GMAIL_USER,
+      pass : process.env.GMAIL_PASS
     }
   });
   email_message = '<div><h1>name:' + name + '</h1></div><br>'
@@ -36,7 +36,7 @@ router.post('/send', function(req, res) {
   // send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
       if(error){
-          return  console.log(error || response); 
+          return  console.log(error || response);
       }
       console.log('Message sent: ' + info.response);
   });
