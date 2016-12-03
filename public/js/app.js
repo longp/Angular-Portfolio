@@ -52,12 +52,6 @@ app.controller("contactController", function ($rootScope, $scope, $http) {
       method:"POST",
       url: '/email/send',
       data:$scope.email
-    }).then(function (data) {
-      console.log('this happend 1')
-      $http.get('/send')
-      .then(function(data) {
-        console.log('hehe', data)
-      })
     }).catch(function (err) {
       console.log(err)
     })
