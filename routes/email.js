@@ -11,7 +11,9 @@ router.post('/send', function(req, res) {
   var message = req.body.message
   var phone = req.body.phone
   var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, 
     auth: {
       user :process.env.GMAIL_USER,
       pass : process.env.GMAIL_PASS
