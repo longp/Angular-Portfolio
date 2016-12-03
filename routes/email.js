@@ -6,7 +6,7 @@ var smtpTransport = require("nodemailer-smtp-transport")
 router.get('/send', function(req,res) {
   res.send(process.env.GMAIL_USER)
 })
-)
+
 router.post('/send', function(req, res) {
   // need to get Sendmail for this to work.....
 
