@@ -53,12 +53,12 @@ app.controller("contactController", function ($rootScope, $scope, $http) {
       url: '/email/send',
       data:$scope.email
     })
-    .then(function(data) {
-      alert('thanks, keep in touch!')
-    })
     .catch(function (err) {
       console.log(err)
     })
+    $scope.email = {}
+    alert('thanks, message received')
+
   }
 })
 app.directive('backImg', function($rootScope){
