@@ -47,6 +47,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 });
 app.controller("contactController", function ($rootScope, $scope, $http) {
   $scope.submit = function () {
+    console.log('yoyoyo')
     $http({
       method:"POST",
       url: '/email/send',
