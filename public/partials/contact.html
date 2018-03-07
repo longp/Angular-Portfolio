@@ -1,0 +1,87 @@
+  <div class="row-fluid" >
+    <div class="col-md-offset-2 col-md-8 contact-div" id="box ">
+       <div class="row">
+         <div class="col-md-8 col-md-offset-2 text-center hitup-div">
+             <span class="col-md-12">LONG &nbsp PHAN</span> <br>
+             <span class="col-md-12">lphan1989@gmail.com - (908)-331-1664</span>
+         </div>
+       </div>
+       <br>
+       <div class="row">
+         <ul class="list-inline text-center">
+           <li>
+               <a target="_blank" href="https://www.linkedin.com/in/long-phan-85486892" ><i class="fa footer-fa fa-fw fa-linkedin"></i></a>
+           </li>
+           <li>
+               <a target="_blank" href="https://github.com/longp" ><i class="fa footer-fa fa-fw fa-github"></i></a>
+           </li>
+           <li>
+           <a target="_blank"href="http://twitter.com/lphanyo"><i class="fa footer-fa fa-fw fa-twitter"></i></a>
+       </li>
+       </ul>
+       </div>
+       <hr class="star-light">
+           <form class="form-horizontal" ng-submit="submit()">
+               <fieldset>
+                   <!-- Form Name -->
+                   <div class="text-center">
+                     <span class="hitup-div text-center">Send me a message</span>
+                   </div>
+                   <br>
+                   <!-- Text input-->
+                   <div class="form-group">
+
+                       <div class="col-md-12">
+                           <div class="input-group">
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                               <input name="first_name" ng-model="email.name" class="form-control" type="text">
+                           </div>
+                       </div>
+                   </div>
+                   <!-- Text input-->
+                   <div class="form-group">
+
+                       <div class="col-md-12">
+                           <div class="input-group">
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                               <input ng-model="email.email" placeholder="E-Mail Address" class="form-control" type="text">
+                           </div>
+                       </div>
+                   </div>
+
+
+                   <!-- Text input-->
+
+                   <div class="form-group">
+
+                       <div class="col-md-12">
+                           <div class="input-group">
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                               <input ng-model="email.phone" placeholder="(005)501-120101" class="form-control" type="text">
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Text input-->
+
+                   <div class="form-group">
+
+                       <div class="col-md-12 inputGroupContainer">
+                           <div class="input-group">
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                               <textarea class="form-control"ng-model="email.message" name="comment" placeholder="Message"></textarea>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+
+                       <div class="col-md-12">
+                           <button ng-disabled="!email.name || !email.email || !email.phone || !email.message" type="submit" class="btn btn-warning btn-block">Send <span class="glyphicon glyphicon-send"></span></button>
+                       </div>
+                   </div>
+
+               </fieldset>
+           </form>
+     </div>
+  </div>
