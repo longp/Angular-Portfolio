@@ -1,6 +1,5 @@
 // Local Enviorment file loaded
-// require('dotenv').config();
-
+require('dotenv').config();
 var express = require('express');
 var app = express();
 var session = require('express-session');
@@ -25,13 +24,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
-  session(
-  {
+  session({
     secret: 'my secret',
     cookie: {maxAge: 100000},
     saveUninitialized: true,
     resave: false
-  }));
+  })
+);
 
 // Static Routes
 app.use("/", express.static("public"));
@@ -40,10 +39,8 @@ app.use("/css", express.static("public/css"));
 app.use('/partials', express.static('/views/partials'))
 
 // Routes
-var email = require('./routes/email.js')
 app.use('/', index);
-app.use('/email', email);
 
-app.listen(PORT, function () {
+app.listen(PORT,() => {
   console.log("Listen on port %s", PORT);
 });
